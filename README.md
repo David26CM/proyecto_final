@@ -40,3 +40,4 @@ uv run python app/gradio_app.py
 ```bash
 uv run pytest tests/ -v
 ```
+
