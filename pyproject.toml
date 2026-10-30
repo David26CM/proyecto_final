@@ -1,0 +1,31 @@
+[project]
+name = "final-mlops"
+version = "0.1.0"
+description = "Proyecto final MLOps"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard]",
+    "gradio",
+    "joblib",
+    "pandas",
+    "pydantic",
+    "scikit-learn",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[project.scripts]
+entrenar = "final_mlops.train:main"
+preparar-datos = "final_mlops.data:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
